@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect } from "react";
 import { Redirect } from "wouter";
-import { Calendar, GraduationCap, BookOpen, Bell, FileText, Clock, Buildings, Users } from "lucide-react";
+import { Calendar, GraduationCap, BookOpen, Bell, FileText, Clock, Building, Users } from "lucide-react";
 import { useChat } from "@/hooks/use-chat";
 import ChatModal from "@/components/chat/chat-modal";
 import { useState } from "react";
@@ -476,7 +476,7 @@ export default function Dashboard() {
             <ResourceCard 
               title="Campus Facilities" 
               description="Information about computer labs, recreation center, and dining options."
-              icon={<Buildings className="h-6 w-6" />}
+              icon={<Building className="h-6 w-6" />}
               buttonText="View Facilities"
             />
             <ResourceCard 

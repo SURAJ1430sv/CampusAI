@@ -35,7 +35,7 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/auth" component={AuthPage} />
       {/* Protected routes */}
-      <ProtectedRoute path="/dashboard" component={() => <div className="p-16 text-center">Student Dashboard Coming Soon</div>} />
+      <ProtectedRoute path="/dashboard" component={Dashboard} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>

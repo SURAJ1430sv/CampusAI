@@ -24,7 +24,7 @@ export default function Header({ toggleMobileMenu }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/">
-            <a className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 cursor-pointer">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center">
                 <i className="fas fa-robot text-white"></i>
               </div>
@@ -32,25 +32,25 @@ export default function Header({ toggleMobileMenu }: HeaderProps) {
                 <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-purple-600 text-transparent bg-clip-text">CampusAI</h1>
                 <p className="text-xs text-gray-500">Your College Assistant</p>
               </div>
-            </a>
+            </div>
           </Link>
 
           <nav className="hidden md:flex space-x-8">
             <Link href="/">
-              <a className="text-gray-700 hover:text-primary font-medium transition-colors">Home</a>
+              <span className="text-gray-700 hover:text-primary font-medium transition-colors cursor-pointer">Home</span>
             </Link>
             <Link href="/about">
-              <a className="text-gray-700 hover:text-primary font-medium transition-colors">About</a>
+              <span className="text-gray-700 hover:text-primary font-medium transition-colors cursor-pointer">About</span>
             </Link>
             <Link href="/faqs">
-              <a className="text-gray-700 hover:text-primary font-medium transition-colors">FAQs</a>
+              <span className="text-gray-700 hover:text-primary font-medium transition-colors cursor-pointer">FAQs</span>
             </Link>
             <Link href="/contact">
-              <a className="text-gray-700 hover:text-primary font-medium transition-colors">Contact</a>
+              <span className="text-gray-700 hover:text-primary font-medium transition-colors cursor-pointer">Contact</span>
             </Link>
             {user && (
               <Link href="/dashboard">
-                <a className="text-gray-700 hover:text-primary font-medium transition-colors">Dashboard</a>
+                <span className="text-gray-700 hover:text-primary font-medium transition-colors cursor-pointer">Dashboard</span>
               </Link>
             )}
           </nav>

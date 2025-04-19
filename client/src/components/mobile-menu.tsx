@@ -38,31 +38,31 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       </div>
       <nav className="flex flex-col space-y-4">
         <Link href="/">
-          <a className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100" onClick={onClose}>
+          <div className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100 cursor-pointer" onClick={onClose}>
             Home
-          </a>
+          </div>
         </Link>
         <Link href="/about">
-          <a className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100" onClick={onClose}>
+          <div className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100 cursor-pointer" onClick={onClose}>
             About
-          </a>
+          </div>
         </Link>
         <Link href="/faqs">
-          <a className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100" onClick={onClose}>
+          <div className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100 cursor-pointer" onClick={onClose}>
             FAQs
-          </a>
+          </div>
         </Link>
         <Link href="/contact">
-          <a className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100" onClick={onClose}>
+          <div className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100 cursor-pointer" onClick={onClose}>
             Contact
-          </a>
+          </div>
         </Link>
         
         {user && (
           <Link href="/dashboard">
-            <a className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100" onClick={onClose}>
+            <div className="text-gray-700 hover:text-primary font-medium py-2 px-4 rounded hover:bg-gray-100 cursor-pointer" onClick={onClose}>
               Dashboard
-            </a>
+            </div>
           </Link>
         )}
         
