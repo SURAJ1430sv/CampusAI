@@ -1,15 +1,21 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { setupAuth } from "./auth";
 import { nanoid } from "nanoid";
 import { z } from "zod";
-import { generateChatResponse } from "./lib/openai";
+import { generateChatResponse, getFallbackResponse } from "./lib/openai";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Set up authentication
+  setupAuth(app);
+  
   // Chat session endpoints
   app.post("/api/chat/session", async (req, res) => {
     try {
-      const sessionData = { userId: null }; // No user authentication required for now
+      // If user is authenticated, associate the chat session with the user
+      const userId = req.isAuthenticated() ? (req.user as any).id : null;
+      const sessionData = { userId };
       const session = await storage.createChatSession(sessionData);
       
       // Initialize the chat with a welcome message
@@ -100,8 +106,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Get conversation history
       const messages = await storage.getChatMessagesBySessionId(session.id);
       
-      // Generate AI response using OpenAI
-      const aiResponse = await generateChatResponse(messages);
+      // Try to generate AI response using OpenAI
+      let aiResponse;
+      try {
+        aiResponse = await generateChatResponse(messages);
+      } catch (error) {
+        console.error("Error generating chat response:", error);
+        
+        // Use fallback response if OpenAI fails
+        const fallbackResponse = getFallbackResponse(message);
+        if (fallbackResponse) {
+          aiResponse = fallbackResponse;
+        } else {
+          aiResponse = "I'm experiencing some technical difficulties right now. Please try again later or contact our support team for assistance.";
+        }
+      }
       
       // Store AI response
       const botMessage = await storage.createChatMessage({

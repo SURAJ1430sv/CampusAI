@@ -5,6 +5,10 @@ import {
   ChatMessage, InsertChatMessage,
   FAQ, InsertFaq
 } from "@shared/schema";
+import session from "express-session";
+import createMemoryStore from "memorystore";
+
+const MemoryStore = createMemoryStore(session);
 
 export interface IStorage {
   // User methods
@@ -24,6 +28,9 @@ export interface IStorage {
   createFaq(faq: InsertFaq): Promise<FAQ>;
   getFaqs(): Promise<FAQ[]>;
   getFaqsByCategory(category: string): Promise<FAQ[]>;
+  
+  // Session store
+  sessionStore: session.Store;
 }
 
 export class MemStorage implements IStorage {
@@ -35,6 +42,7 @@ export class MemStorage implements IStorage {
   private currentSessionId: number;
   private currentMessageId: number;
   private currentFaqId: number;
+  public sessionStore: session.Store;
 
   constructor() {
     this.users = new Map();
@@ -45,6 +53,9 @@ export class MemStorage implements IStorage {
     this.currentSessionId = 1;
     this.currentMessageId = 1;
     this.currentFaqId = 1;
+    this.sessionStore = new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    });
     
     // Initialize with some FAQs
     this.initializeFaqs();
