@@ -16,11 +16,17 @@ export default function ChatButton() {
       <div className="fixed bottom-6 right-6 z-50">
         <button 
           onClick={handleOpenChat}
-          className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition"
-          aria-label="Open chat"
+          className="w-16 h-16 bg-gradient-to-r from-primary to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
+          aria-label="Open chat with CampusAI"
         >
-          <i className="fas fa-comments text-white text-2xl"></i>
+          <div className="relative">
+            <i className="fas fa-comments text-white text-2xl"></i>
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+          </div>
         </button>
+        <div className="absolute -top-8 right-0 bg-white px-3 py-1 rounded-full text-sm font-medium shadow-md opacity-0 hover:opacity-100 transition-opacity duration-300">
+          Chat with CampusAI
+        </div>
       </div>
       
       {isModalOpen && <ChatModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
