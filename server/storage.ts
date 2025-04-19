@@ -84,12 +84,13 @@ export class MemStorage implements IStorage {
     const id = this.currentSessionId++;
     const sessionToken = nanoid();
     const createdAt = new Date();
+    const userId = sessionData.userId || null;
     
     const session: ChatSession = { 
       id, 
       sessionToken, 
       createdAt,
-      ...sessionData 
+      userId
     };
     
     this.chatSessions.set(id, session);
