@@ -5,7 +5,7 @@ import { ChatMessage } from "@shared/schema";
 const OPENAI_MODEL = "gpt-4o";
 
 const openai = new OpenAI({ 
-  apiKey: process.env.OPENAI_API_KEY || "sk-dummy-key" // For development, will be replaced with real key
+  apiKey: process.env.OPENAI_API_KEY 
 });
 
 export async function generateChatResponse(messageHistory: ChatMessage[]): Promise<string> {

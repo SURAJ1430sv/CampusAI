@@ -12,6 +12,7 @@ import About from "@/pages/about";
 import FAQs from "@/pages/faqs";
 import Contact from "@/pages/contact";
 import AuthPage from "@/pages/auth-page";
+import Dashboard from "@/pages/dashboard";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ChatButton from "@/components/chat/chat-button";

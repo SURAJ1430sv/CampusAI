@@ -48,9 +48,13 @@ export function useChat(): UseChat {
   
   // Get the session token from local storage on load
   useEffect(() => {
-    const storedToken = localStorage.getItem('chatSessionToken');
-    if (storedToken) {
-      setSessionToken(storedToken);
+    try {
+      const storedToken = localStorage.getItem('chatSessionToken');
+      if (storedToken) {
+        setSessionToken(storedToken);
+      }
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
     }
   }, []);
   
@@ -134,9 +138,8 @@ export function useChat(): UseChat {
   
   // Initialize chat
   const initiateChat = () => {
-    if (!sessionToken) {
-      createSessionMutation.mutate();
-    }
+    // Always create a new session when initiating chat
+    createSessionMutation.mutate();
   };
   
   // Process suggestion clicks
