@@ -28,7 +28,7 @@ It integrates AI-driven responses, real-time data, and a user-friendly interface
 <img width="1573" height="705" alt="Screenshot 2025-11-06 205300" src="https://github.com/user-attachments/assets/f8c742b5-d391-4e9e-b224-6d551ff3cf94" />
 
 ## About Page
-<img width="1706" height="878" alt="Screenshot 2025-11-06 205338" src="https://github.com/user-attachments/assets/cbc6f18f-a3e5-4408-9ffa-226772433c45" />
+<img width="1698" height="888" alt="Screenshot 2025-11-06 205221" src="https://github.com/user-attachments/assets/0f955faa-818b-415e-b82a-1a941dacce72" />
 
 ## AI Bot
 <img width="1706" height="878" alt="Screenshot 2025-11-06 205338" src="https://github.com/user-attachments/assets/a4b69ee1-fef4-4e1e-9d50-c5fde3af3401" />
