@@ -19,7 +19,7 @@ It integrates AI-driven responses, real-time data, and a user-friendly interface
 ---
 ### 📸 Screenshots
 ## Home Page
-<img width="1698" height="888" alt="Screenshot 2025-11-06 205221" src="https://github.com/user-attachments/assets/5f6a1030-f9c8-4e0c-b641-4331a3d6df03" />
+<img width="1711" height="883" alt="Screenshot 2025-11-06 205114" src="https://github.com/user-attachments/assets/4830e208-db7b-4295-9c36-808795143d66" />
 
 ## Registration Page
 <img width="628" height="870" alt="Screenshot 2025-11-06 205400" src="https://github.com/user-attachments/assets/4b10585e-e272-448d-87c4-0d85f8add893" />
