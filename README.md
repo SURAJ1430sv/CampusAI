@@ -23,10 +23,15 @@ It integrates AI-driven responses, real-time data, and a user-friendly interface
 
 ## Registration Page
 <img width="628" height="870" alt="Screenshot 2025-11-06 205400" src="https://github.com/user-attachments/assets/4b10585e-e272-448d-87c4-0d85f8add893" />
+
 ## FAQ
 <img width="1573" height="705" alt="Screenshot 2025-11-06 205300" src="https://github.com/user-attachments/assets/f8c742b5-d391-4e9e-b224-6d551ff3cf94" />
+
+## About Page
 <img width="1706" height="878" alt="Screenshot 2025-11-06 205338" src="https://github.com/user-attachments/assets/cbc6f18f-a3e5-4408-9ffa-226772433c45" />
-<img width="628" height="870" alt="Screenshot 2025-11-06 205400" src="https://github.com/user-attachments/assets/7ed67d5f-efbe-4a3d-889d-31fb17332cbf" />
+
+## AI Bot
+<img width="1706" height="878" alt="Screenshot 2025-11-06 205338" src="https://github.com/user-attachments/assets/a4b69ee1-fef4-4e1e-9d50-c5fde3af3401" />
 
 
 ### 🧩 Tech Stack
